@@ -1,0 +1,30 @@
+.container {
+  background: #f4f6f8;
+  height: 100% !important;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: 575px) {
+    align-items: unset;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    width: 550px;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background: rgb(247, 247, 250);
+    width: 90%;
+    max-width: 575px;
+    position: relative;
+    padding: 5px 20px;
+    @media only screen and (max-width: 575px) {
+      width: 100%;
+      border-radius: unset;
+    }
+  }
+}
