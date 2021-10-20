@@ -12,9 +12,9 @@ const TransitTypeSelect = () => {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <HeaderBlock title="Realtime Departures" subtitle="Select" />
-      <ButtonBlock className={styles.container} justify="center">
+      <ButtonBlock justify="center">
         <Button type="button" primary onClick={() => selectTransitType('route')}>
           By route
         </Button>

@@ -12,9 +12,9 @@ const RouteDirection = ({ data }) => {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <HeaderBlock title="Select direction" />
-      <ButtonBlock className={styles.container} justify="center">
+      <ButtonBlock justify="center">
         {data?.map((route) => {
           return (
             <Button
