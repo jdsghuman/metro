@@ -1,20 +1,25 @@
+import useSWR from 'swr'
+import { useRouter } from 'next/router'
 import React from 'react'
 import RouteStopSelectorForm from '../../../../components/routeStopSelectorForm'
+import HeaderBlock from '../../../../components/headerBlock'
+import fetcher from '../../../../components/util/fetcher'
 
-export async function getServerSideProps(context) {
-  const { routeid, directionid } = context.params
+const Stops = () => {
+  const router = useRouter()
+  const { routeid, directionid } = router.query
 
-  const res = await fetch(`https://svc.metrotransit.org/nextripv2/stops/${routeid}/${directionid}`)
-  const data = await res.json()
-  console.log('data serverside', data)
-  return {
-    props: {
-      data,
-    },
-  }
-}
+  const shouldFetch = routeid && directionid
 
-const Stops = ({ data }) => {
+  const { data, error } = useSWR(
+    () =>
+      shouldFetch ? `https://svc.metrotransit.org/nextripv2/stops/${routeid}/${directionid}` : null,
+    fetcher,
+    { refreshInterval: 60000 }
+  )
+
+  if (error) return <HeaderBlock subtitle="Failed to load" />
+  if (data?.status === 400 || !data) return <HeaderBlock subtitle="Loading..." />
   return <RouteStopSelectorForm data={data} />
 }
 

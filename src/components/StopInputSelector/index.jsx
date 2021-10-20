@@ -1,3 +1,3 @@
-import StopSelectorForm from './StopInputSelector'
+import StopInputSelector from './StopInputSelector'
 
-export default StopSelectorForm
+export default StopInputSelector

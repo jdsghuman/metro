@@ -89,6 +89,7 @@
 .time {
   font-weight: 600;
   color: $primary;
+  white-space: nowrap;
 }
 
 ul > li:first-child .time {

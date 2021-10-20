@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-import RouteError from '../ErrorHandling/RouteError/RouteError'
 import HeaderBlock from '../headerBlock'
 import Button from '../button'
 import styles from './RouteStopSelectorForm.module.scss'
@@ -16,8 +15,6 @@ const RouteStopSelectorForm = ({ data }) => {
   const selectStop = (event) => {
     setStopSelected(event.target.value)
   }
-  console.log('data in routestopselectorform', data)
-  if (data.status === 400) return <RouteError>{data.detail}</RouteError>
   return (
     <>
       <HeaderBlock title="Select a stop" />
