@@ -1,0 +1,47 @@
+@import '@styles/variables';
+@import '@styles/animations';
+
+.button {
+  background: #f3f5f6;
+  text-align: center;
+  padding: 0.5em 1em;
+  margin: 1em 0 0;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 400ms $ease-in--quint;
+  font-size: 1.2rem;
+  &--primary {
+    background: $primary;
+    border: 2px solid $primary;
+    color: #ffffff;
+    transition: all 400ms $ease-in--quint;
+    &:hover {
+      background: rgba(0, 66, 144, 0.8);
+      border: 2px solid $primary;
+    }
+  }
+  &--accent {
+    background: none;
+    border: 2px solid $primary;
+    color: $primary;
+    transition: all 400ms $ease-in--quint;
+    &:hover {
+      background: rgba(0, 66, 144, 0.1);
+    }
+  }
+  &--disabled {
+    border: 2px solid #ccc;
+    color: #ccc;
+    background: none;
+    cursor: not-allowed;
+    pointer-events: none;
+    &:hover {
+      background: none;
+      border: 2px solid #ccc;
+    }
+  }
+  &:focus {
+    outline-color: $secondary;
+  }
+}

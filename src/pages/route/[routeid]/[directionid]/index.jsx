@@ -1,5 +1,5 @@
 import React from 'react'
-import RouteStopSelectorForm from '../../../../components/RouteStopSelectorForm/RouteStopSelectorForm'
+import RouteStopSelectorForm from '../../../../components/RouteStopSelectorForm'
 
 export async function getServerSideProps(context) {
   const { routeid, directionid } = context.params
