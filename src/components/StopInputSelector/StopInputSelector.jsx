@@ -32,7 +32,7 @@ const StopInputSelector = () => {
           Enter Stop Number
         </label>
         <input
-          type="text"
+          type="number"
           value={stopNumber}
           onChange={handleChange}
           className={styles.input__field}
