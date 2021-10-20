@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
+import Button from '../Button'
+import HeaderBlock from '../HeaderBlock'
+import styles from './StopInputSelect.module.scss'
 
 const StopInputSelector = () => {
   const inputElement = useRef(null)
@@ -22,21 +25,27 @@ const StopInputSelector = () => {
   }, [])
 
   return (
-    <form onSubmit={getStops}>
-      <label htmlFor="stopNumber">
-        Enter Stop Number
+    <>
+      <HeaderBlock title="Enter Stop Number" />
+      <form className={styles.form} onSubmit={getStops}>
+        <label className={styles.sr__only} htmlFor="stopNumber">
+          Enter Stop Number
+        </label>
         <input
           type="text"
           value={stopNumber}
           onChange={handleChange}
+          className={styles.input__field}
           name="stopNumber"
           placeholder="Enter stop number"
           required
           ref={inputElement}
         />
-      </label>
-      <input type="submit" value="submit" />
-    </form>
+        <Button disabled={!stopNumber} primary type="submit" value="submit">
+          Get Stops
+        </Button>
+      </form>
+    </>
   )
 }
 

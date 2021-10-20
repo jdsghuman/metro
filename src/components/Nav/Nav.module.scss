@@ -1,4 +1,7 @@
+@import '@styles/variables';
+
 .nav {
+  padding-top: 22px;
   &__links {
     display: flex;
     flex-direction: row;
@@ -7,11 +10,11 @@
     list-style: none;
     font-family: 'Lato', sans-serif;
     font-size: 1.3rem;
-    color: #004290;
+    color: $primary;
   }
   .icon {
     font-size: 1rem;
-    color: #e6011f;
+    color: $secondary;
     padding-right: 5px;
   }
 
@@ -20,5 +23,8 @@
     padding-bottom: 8px;
     margin-bottom: 40px;
     padding-left: 0;
+    li {
+      padding-bottom: 8px;
+    }
   }
 }
