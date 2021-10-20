@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import RouteSelectorForm from '../../components/routeSelectorForm'
 
 export async function getStaticProps() {

@@ -1,5 +1,5 @@
 import RouteError from '../../../components/ErrorHandling/RouteError/RouteError'
-import RouteDirection from '../../../components/RouteDirection/RouteDirection'
+import RouteDirection from '../../../components/routeDirection/RouteDirection'
 
 export async function getServerSideProps(context) {
   const { routeid } = context.params

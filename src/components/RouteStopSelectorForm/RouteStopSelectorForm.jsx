@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import RouteError from '../ErrorHandling/RouteError/RouteError'
-import HeaderBlock from '../HeaderBlock'
-import Button from '../Button'
+import HeaderBlock from '../headerBlock'
+import Button from '../button'
 import styles from './RouteStopSelectorForm.module.scss'
 
 const RouteStopSelectorForm = ({ data }) => {

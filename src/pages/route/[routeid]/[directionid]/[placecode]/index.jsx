@@ -1,4 +1,5 @@
 import React from 'react'
+import DepartureDisplay from '../../../../../components/departureDisplay/DepartureDisplay'
 
 export async function getServerSideProps(context) {
   const { routeid, directionid, placecode } = context.params
@@ -15,17 +16,7 @@ export async function getServerSideProps(context) {
 
 const index = ({ data }) => {
   console.log('data in placecode', data)
-  return (
-    <ul>
-      {data.departures.map((departure) => {
-        return (
-          <li key={departure.trip_id}>
-            {departure.description} - {departure.departure_text}
-          </li>
-        )
-      })}
-    </ul>
-  )
+  return <DepartureDisplay data={data} />
 }
 
 export default index

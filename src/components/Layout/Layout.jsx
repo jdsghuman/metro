@@ -1,5 +1,5 @@
 import styles from './Layout.module.scss'
-import Nav from '../Nav'
+import Nav from '../nav'
 
 const Layout = ({ children }) => {
   return (

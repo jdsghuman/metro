@@ -1,4 +1,4 @@
-import StopNumberForm from '../../components/StopInputSelector'
+import StopNumberForm from '../../components/stopInputSelector'
 
 const Stop = () => <StopNumberForm />
 
