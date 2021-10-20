@@ -15,10 +15,10 @@ const TransitTypeSelect = () => {
     <div>
       <HeaderBlock title="Realtime Departures" subtitle="Select" />
       <ButtonBlock className={styles.container} justify="center">
-        <Button primary onClick={() => selectTransitType('route')}>
+        <Button type="button" primary onClick={() => selectTransitType('route')}>
           By route
         </Button>
-        <Button accent onClick={() => selectTransitType('stop')}>
+        <Button type="button" accent onClick={() => selectTransitType('stop')}>
           By stop #
         </Button>
       </ButtonBlock>

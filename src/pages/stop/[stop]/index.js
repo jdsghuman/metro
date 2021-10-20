@@ -19,8 +19,8 @@ const StopNumber = () => {
     { refreshInterval: 60000 }
   )
 
-  if (error) return <HeaderBlock subtitle="Failed to load" />
-  if (data?.status === 400 || !data) return <HeaderBlock subtitle="Loading..." />
+  if (data?.status === 400 || error) return <HeaderBlock subtitle="Failed to load" />
+  if (!data) return <HeaderBlock subtitle="Loading..." />
   return (
     <div>
       {data?.departures?.length ? (
