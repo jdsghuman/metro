@@ -17,7 +17,6 @@ const RouteDirection = ({ data }) => {
       <ButtonBlock className={styles.container} justify="center">
         {data.map((route) => {
           return (
-            // <HeaderBlock
             <Button accent onClick={() => getStops(route.direction_id)} key={route.direction_id}>
               {route.direction_name}
             </Button>
