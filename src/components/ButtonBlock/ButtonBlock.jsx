@@ -29,8 +29,7 @@ ButtonBlock.propTypes = {
 }
 
 ButtonBlock.defaultProps = {
-  className: '',
-  justify: 'left',
+  justify: 'center',
 }
 
 export default ButtonBlock

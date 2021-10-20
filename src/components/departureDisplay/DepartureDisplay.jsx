@@ -4,13 +4,14 @@ import { BiMinusCircle } from 'react-icons/bi'
 import { MdOutlineDoubleArrow } from 'react-icons/md'
 import classNames from 'classnames/bind'
 import Button from '../button'
-import styles from './DepartureDisplay.module.scss'
 import HeaderBlock from '../headerBlock'
+import AlertDisplay from '../alertDisplay/AlertDisplay'
+import styles from './DepartureDisplay.module.scss'
 
 const cx = classNames.bind(styles)
 
 const DepartureDisplay = ({ data }) => {
-  const { departures, stops } = data
+  const { departures, stops, alerts } = data
   const { stopsToShow, getMoreStops, toggleShowAllRoutes } = useTransitDisplay(departures)
   return (
     <div className={styles.container}>
@@ -64,6 +65,7 @@ const DepartureDisplay = ({ data }) => {
           Departures
         </Button>
       )}
+      {alerts.length > 0 && <AlertDisplay alerts={alerts} />}
     </div>
   )
 }
