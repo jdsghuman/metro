@@ -23,7 +23,7 @@ const RouteSelectorForm = ({ routes }) => {
         <label className={styles.sr__only} htmlFor="selectRoute">
           Select a route
         </label>
-        <select className={styles.select} onChange={handleRouteNumber} name="selectRoute">
+        <select className={styles.select} onChange={handleRouteNumber} id="selectRoute">
           <option value=""></option>
           {routes.map((route) => (
             <option key={route.route_id} value={route.route_id}>

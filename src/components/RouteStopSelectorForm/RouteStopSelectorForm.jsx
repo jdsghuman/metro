@@ -25,7 +25,7 @@ const RouteStopSelectorForm = ({ data }) => {
         <label className={styles.sr__only} htmlFor="routes">
           Select stop:
         </label>
-        <select className={styles.select} onChange={selectStop} name="routes">
+        <select className={styles.select} onChange={selectStop} id="routes">
           <option value=""></option>
           {data.map((route) => (
             <option key={route.place_code} value={route.place_code}>
