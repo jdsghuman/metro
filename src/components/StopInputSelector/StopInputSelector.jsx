@@ -2,14 +2,13 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import Button from '../button'
 import HeaderBlock from '../headerBlock'
-import styles from './StopInputSelect.module.scss'
+import styles from './StopInputSelector.module.scss'
 
 const StopInputSelector = () => {
   const inputElement = useRef(null)
   const router = useRouter()
 
   const [stopNumber, setStopNumber] = useState('')
-  console.log('pathname', router.pathname)
 
   const getStops = (event) => {
     event.preventDefault()

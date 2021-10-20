@@ -1,29 +1,26 @@
-import React from 'react'
+import useSWR from 'swr'
+import { useRouter } from 'next/router'
 import StopInputSelector from '../../../components/stopInputSelector'
 import RouteError from '../../../components/ErrorHandling/RouteError/RouteError'
 import DepartureDisplay from '../../../components/departureDisplay/DepartureDisplay'
+import fetcher from '../../../components/util/fetcher'
+import HeaderBlock from '../../../components/headerBlock'
 
-export async function getServerSideProps(context) {
-  const { stop } = context.params
-  const res = await fetch(`https://svc.metrotransit.org/nextripv2/${stop}`)
-  const data = await res.json()
-  console.log('data serverside', data)
-  return {
-    props: {
-      data,
-    },
-  }
-}
+const StopNumber = () => {
+  const router = useRouter()
 
-const StopNumber = ({ data }) => {
-  console.log('data', data)
-  if (data.status === 400)
-    return (
-      <>
-        <StopInputSelector />
-        <RouteError>{data.detail}</RouteError>
-      </>
-    )
+  const { stop } = router.query
+
+  const shouldFetch = stop
+
+  const { data, error } = useSWR(
+    () => (shouldFetch ? `https://svc.metrotransit.org/nextripv2/${stop}` : null),
+    fetcher,
+    { refreshInterval: 60000 }
+  )
+
+  if (error) return <HeaderBlock subtitle="Failed to load" />
+  if (data?.status === 400 || !data) return <HeaderBlock subtitle="Loading..." />
   return (
     <div>
       {data?.departures?.length ? (

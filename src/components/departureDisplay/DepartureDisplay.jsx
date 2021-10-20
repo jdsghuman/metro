@@ -9,16 +9,15 @@ import styles from './DepartureDisplay.module.scss'
 const cx = classNames.bind(styles)
 
 const DepartureDisplay = ({ data }) => {
-  console.log('data DepartureDisplay', data)
-  const { departures } = data
+  const { departures, stops } = data
   const { stopsToShow, getMoreStops, toggleShowAllRoutes } = useTransitDisplay(departures)
   return (
     <div className={styles.container}>
       <div className={styles.heading}>
-        <p className={styles.description}>{data.stops[0].description}</p>
+        <p className={styles.description}>{stops[0].description}</p>
         <div>
           <p className={styles.description__stop}>
-            Stop #: <span className={styles.number}>{data.stops[0].stop_id}</span>
+            Stop #: <span className={styles.number}>{stops[0].stop_id}</span>
           </p>
         </div>
       </div>

@@ -1,5 +1,5 @@
-import StopNumberForm from '../../components/stopInputSelector'
+import StopInputSelector from '../../components/stopInputSelector'
 
-const Stop = () => <StopNumberForm />
+const Stop = () => <StopInputSelector />
 
 export default Stop

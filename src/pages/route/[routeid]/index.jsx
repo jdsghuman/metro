@@ -1,19 +1,23 @@
-import RouteError from '../../../components/ErrorHandling/RouteError/RouteError'
+import useSWR from 'swr'
+import { useRouter } from 'next/router'
 import RouteDirection from '../../../components/routeDirection/RouteDirection'
+import HeaderBlock from '../../../components/headerBlock'
+import fetcher from '../../../components/util/fetcher'
 
-export async function getServerSideProps(context) {
-  const { routeid } = context.params
-  const res = await fetch(`https://svc.metrotransit.org/nextripv2/directions/${routeid}`)
-  const data = await res.json()
-  return {
-    props: {
-      data,
-    },
-  }
-}
+const index = () => {
+  const router = useRouter()
+  const { routeid } = router.query
 
-const index = ({ data }) => {
-  if (data.status === 400) return <RouteError>{data.detail}</RouteError>
+  const shouldFetch = routeid
+
+  const { data, error } = useSWR(
+    () => (shouldFetch ? `https://svc.metrotransit.org/nextripv2/directions/${routeid}` : null),
+    fetcher,
+    { refreshInterval: 60000 }
+  )
+
+  if (error) return <HeaderBlock subtitle="Failed to load" />
+  if (data?.status === 400 || !data) return <HeaderBlock subtitle="Loading..." />
   return <RouteDirection data={data} />
 }
 
