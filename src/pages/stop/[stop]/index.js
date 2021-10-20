@@ -1,6 +1,7 @@
 import React from 'react'
-import StopInputSelector from '../../../components/StopInputSelector'
+import StopInputSelector from '../../../components/stopInputSelector'
 import RouteError from '../../../components/ErrorHandling/RouteError/RouteError'
+import DepartureDisplay from '../../../components/departureDisplay/DepartureDisplay'
 
 export async function getServerSideProps(context) {
   const { stop } = context.params
@@ -16,16 +17,17 @@ export async function getServerSideProps(context) {
 
 const StopNumber = ({ data }) => {
   console.log('data', data)
-  if (data.status === 400) return <RouteError>{data.detail}</RouteError>
+  if (data.status === 400)
+    return (
+      <>
+        <StopInputSelector />
+        <RouteError>{data.detail}</RouteError>
+      </>
+    )
   return (
     <div>
-      <StopInputSelector />
       {data?.departures?.length ? (
-        <ul>
-          {data?.departures?.map((departure) => (
-            <li key={departure.trip_id}>{departure.description}</li>
-          ))}
-        </ul>
+        <DepartureDisplay data={data} />
       ) : (
         <h3>No departures at this time</h3>
       )}

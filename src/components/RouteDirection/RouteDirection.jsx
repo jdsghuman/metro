@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
-import Button from '../Button'
-import ButtonBlock from '../ButtonBlock'
-import HeaderBlock from '../HeaderBlock'
+import Button from '../button'
+import ButtonBlock from '../buttonBlock'
+import HeaderBlock from '../headerBlock'
 import styles from './RouteDirection.module.scss'
 
 const RouteDirection = ({ data }) => {
