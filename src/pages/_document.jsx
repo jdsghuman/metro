@@ -9,11 +9,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>
-          <title>Transit Tracker</title>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <meta property="og:title" content="Transit Tracker" key="title" />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />

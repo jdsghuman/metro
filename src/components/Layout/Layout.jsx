@@ -1,14 +1,22 @@
+import Head from 'next/head'
 import Nav from '../nav'
 import styles from './Layout.module.scss'
 
 const Layout = ({ children }) => {
   return (
-    <div className={styles.container}>
-      <div className={styles['container__main']}>
-        <Nav />
-        {children}
+    <>
+      <Head>
+        <title>Transit Tracker</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content="Transit Tracker" key="title" />
+      </Head>
+      <div className={styles.container}>
+        <div className={styles['container__main']}>
+          <Nav />
+          {children}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
