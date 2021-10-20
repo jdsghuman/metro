@@ -21,15 +21,7 @@ const StopNumber = () => {
 
   if (data?.status === 400 || error) return <HeaderBlock subtitle="Failed to load" />
   if (!data) return <HeaderBlock subtitle="Loading..." />
-  return (
-    <div>
-      {data?.departures?.length ? (
-        <DepartureDisplay data={data} />
-      ) : (
-        <h3>No departures at this time</h3>
-      )}
-    </div>
-  )
+  return <DepartureDisplay data={data} />
 }
 
 export default StopNumber
