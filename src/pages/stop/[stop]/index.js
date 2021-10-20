@@ -1,14 +1,11 @@
 import useSWR from 'swr'
 import { useRouter } from 'next/router'
-import StopInputSelector from '../../../components/stopInputSelector'
-import RouteError from '../../../components/ErrorHandling/RouteError/RouteError'
 import DepartureDisplay from '../../../components/departureDisplay/DepartureDisplay'
 import fetcher from '../../../components/util/fetcher'
 import HeaderBlock from '../../../components/headerBlock'
 
 const StopNumber = () => {
   const router = useRouter()
-
   const { stop } = router.query
 
   const shouldFetch = stop
