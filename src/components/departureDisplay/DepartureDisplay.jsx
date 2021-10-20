@@ -5,6 +5,7 @@ import { MdOutlineDoubleArrow } from 'react-icons/md'
 import classNames from 'classnames/bind'
 import Button from '../button'
 import styles from './DepartureDisplay.module.scss'
+import HeaderBlock from '../headerBlock'
 
 const cx = classNames.bind(styles)
 
@@ -29,20 +30,24 @@ const DepartureDisplay = ({ data }) => {
         <p>Departs</p>
       </div>
       <ul>
-        {stopsToShow.map((d) => {
-          return (
-            <li className={styles.list} key={d.trip_id}>
-              <p className={cx('left', 'description')}>
-                <span>{d.route_short_name}</span>
-                <span>{d.description}</span>
-              </p>
-              <p className={styles.time}>
-                <MdOutlineDoubleArrow className={cx('blink')} />
-                {d.departure_text}
-              </p>
-            </li>
-          )
-        })}
+        {departures.length === 0 ? (
+          <HeaderBlock subtitle="No departures currently" />
+        ) : (
+          stopsToShow.map((d) => {
+            return (
+              <li className={styles.list} key={d.trip_id}>
+                <p className={cx('left', 'description')}>
+                  <span>{d.route_short_name}</span>
+                  <span>{d.description}</span>
+                </p>
+                <p className={styles.time}>
+                  <MdOutlineDoubleArrow className={cx('blink')} />
+                  {d.departure_text}
+                </p>
+              </li>
+            )
+          })
+        )}
       </ul>
       {departures.length > 3 && (
         <Button
