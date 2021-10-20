@@ -16,7 +16,7 @@ const StopNumber = () => {
   const { data, error } = useSWR(
     () => (shouldFetch ? `https://svc.metrotransit.org/nextripv2/${stop}` : null),
     fetcher,
-    { refreshInterval: 60000 }
+    { refreshInterval: 30000 }
   )
 
   if (data?.status === 400 || error) return <HeaderBlock subtitle="Failed to load" />

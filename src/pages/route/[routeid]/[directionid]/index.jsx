@@ -15,7 +15,7 @@ const Stops = () => {
     () =>
       shouldFetch ? `https://svc.metrotransit.org/nextripv2/stops/${routeid}/${directionid}` : null,
     fetcher,
-    { refreshInterval: 60000 }
+    { refreshInterval: 30000 }
   )
 
   if (error) return <HeaderBlock subtitle="Failed to load" />
