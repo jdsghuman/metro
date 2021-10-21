@@ -4,10 +4,10 @@ import styles from './AlertDisplay.module.scss'
 const AlertDisplay = ({ alerts }) => {
   return (
     <div className={styles.section}>
-      <h3 className={styles.alert__title}>
+      <h3 data-testid="alert-heading" className={styles.alert__title}>
         <FiAlertTriangle className={styles.icon} /> Route alerts
       </h3>
-      {alerts.map((alert, i) => {
+      {alerts?.map((alert, i) => {
         return (
           <div key={i} className={styles.container}>
             <p className={styles.alert__display}>{alert.alert_text}</p>

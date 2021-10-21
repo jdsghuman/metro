@@ -36,7 +36,7 @@ const DepartureDisplay = ({ data }) => {
         ) : (
           stopsToShow.map((d) => {
             return (
-              <li className={styles.list} key={d.trip_id}>
+              <li data-testid="departure-list" className={styles.list} key={d.trip_id}>
                 <p className={cx('left', 'description')}>
                   <span>{d.route_short_name}</span>
                   <span>{d.description}</span>
@@ -53,11 +53,15 @@ const DepartureDisplay = ({ data }) => {
       {departures.length > 3 && (
         <Button type="button" onClick={getMoreStops} accent className={styles.button}>
           {toggleShowAllRoutes ? (
-            <BiMinusCircle className={styles.icon__minus} />
+            <>
+              <BiMinusCircle className={styles.icon__minus} />
+            </>
           ) : (
-            <BsPlusCircle className={styles.icon__plus} />
+            <>
+              <BsPlusCircle className={styles.icon__plus} />
+              Show more
+            </>
           )}
-          Departures
         </Button>
       )}
       {alerts.length > 0 && <AlertDisplay alerts={alerts} />}
