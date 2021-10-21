@@ -7,9 +7,9 @@ const AlertDisplay = ({ alerts }) => {
       <h3 className={styles.alert__title}>
         <FiAlertTriangle className={styles.icon} /> Route alerts
       </h3>
-      {alerts.map((alert) => {
+      {alerts.map((alert, i) => {
         return (
-          <div className={styles.container}>
+          <div key={i} className={styles.container}>
             <p className={styles.alert__display}>{alert.alert_text}</p>
           </div>
         )

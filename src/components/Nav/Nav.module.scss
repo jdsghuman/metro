@@ -13,9 +13,12 @@
     color: $primary;
   }
   .icon {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: $secondary;
-    padding-right: 5px;
+    padding-right: 4px;
+    padding-bottom: 1px;
+    vertical-align: middle;
+    display: inline-block;
   }
 
   ul {
