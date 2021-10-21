@@ -17,7 +17,7 @@ const RouteStopSelectorForm = ({ data }) => {
   }
   return (
     <>
-      <HeaderBlock title="Select a stop" />
+      <HeaderBlock title="Select a Stop" />
       <form className={styles.form} onSubmit={handleSubmit}>
         <label className={styles.sr__only} htmlFor="routes">
           Select stop:
@@ -31,7 +31,7 @@ const RouteStopSelectorForm = ({ data }) => {
           ))}
         </select>
         <Button disabled={!stopSelected} primary type="submit" value="submit">
-          Select a Stop
+          Get Departure
         </Button>
       </form>
     </>
