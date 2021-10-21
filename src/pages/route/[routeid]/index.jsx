@@ -13,7 +13,7 @@ const Index = () => {
   const { data, error } = useSWR(
     () => (shouldFetch ? `https://svc.metrotransit.org/nextripv2/directions/${routeid}` : null),
     fetcher,
-    { refreshInterval: 30000 }
+    { refreshInterval: 60000 }
   )
 
   if (error) return <HeaderBlock subtitle="Failed to load" />

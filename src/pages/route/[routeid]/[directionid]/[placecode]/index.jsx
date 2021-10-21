@@ -16,7 +16,7 @@ const Index = () => {
         ? `https://svc.metrotransit.org/nextripv2/${routeid}/${directionid}/${placecode}`
         : null,
     fetcher,
-    { refreshInterval: 30000 }
+    { refreshInterval: 60000 }
   )
 
   if (data?.status === 400 || error) return <HeaderBlock subtitle="Failed to load" />
