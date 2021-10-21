@@ -1,4 +1,4 @@
-import StopInputSelector from '../../components/stopInputSelector'
+import StopInputSelector from '../../components/StopInputSelector'
 
 const Stop = () => <StopInputSelector />
 

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
-import Button from '../button'
-import ButtonBlock from '../buttonBlock/ButtonBlock'
-import HeaderBlock from '../headerBlock'
+import Button from '../Button'
+import ButtonBlock from '../ButtonBlock'
+import HeaderBlock from '../HeaderBlock'
 import styles from './TransitTypeSelect.module.scss'
 
 const TransitTypeSelect = () => {

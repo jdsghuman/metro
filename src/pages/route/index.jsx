@@ -1,5 +1,5 @@
 import React from 'react'
-import RouteSelectorForm from '../../components/routeSelectorForm'
+import RouteSelectorForm from '../../components/RouteSelectorForm'
 
 export async function getStaticProps() {
   const res = await fetch('https://svc.metrotransit.org/nextripv2/routes')

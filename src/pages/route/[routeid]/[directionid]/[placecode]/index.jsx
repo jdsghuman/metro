@@ -2,7 +2,7 @@ import useSWR from 'swr'
 import { useRouter } from 'next/router'
 import DepartureDisplay from '../../../../../components/departureDisplay/DepartureDisplay'
 import fetcher from '../../../../../components/util/fetcher'
-import HeaderBlock from '../../../../../components/headerBlock'
+import HeaderBlock from '../../../../../components/HeaderBlock'
 
 const Index = () => {
   const router = useRouter()
