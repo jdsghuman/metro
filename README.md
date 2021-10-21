@@ -2,6 +2,10 @@
 
 The MetroTracker web application allows users to track and view departure times, select a custom route, and view alerts for the route selected.
 
+View prod demo link:
+
+[transittracker](https://metro-5j9cv04mr-jdsghuman.vercel.app)
+
 ## Installation
 
 Yarn is the package manager. It will install and manage the dependencies.
