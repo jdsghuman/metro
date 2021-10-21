@@ -1,5 +1,5 @@
 import TransitTypeSelect from '../components/transitTypeSelect'
 
-const Home = () => <TransitTypeSelect />
+const Index = () => <TransitTypeSelect />
 
-export default Home
+export default Index
