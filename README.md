@@ -1,34 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MetroTracker
 
-## Getting Started
+The MetroTracker web application allows users to track and view departure times, select a custom route, and view alerts for the route selected.
 
-First, run the development server:
+## Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Yarn is the package manager. It will install and manage the dependencies.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ### `yarn install`
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+  to install the required dependencies
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- ### `yarn run dev`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  to run the application locally in development mode.
 
-## Learn More
+  - Open `http://localhost:3000` to view the application in the browser
 
-To learn more about Next.js, take a look at the following resources:
+## Testing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Unit Tests
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Unit tests are located in the `src` folder inside the components folders in files named like `*.test.js`.
 
-## Deploy on Vercel
+- `yarn test` : single run of the unit tests
+- `yarn test:coverage`: run test coverage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Used Next.js to build the web application
+- Data is rendered using a combination of Client-Side and Server-Side
+- Added user feedback for data fetching and a better user experience, assuming most users will be using mobile and/or data on mobile phones
+- Users can select a route or enter a stop number
+- Departure data is auto revalidated every 60 seconds, as well as on browser focus
+- Alerts for the given route/stop are displayed for users
+- Application routing allows users to respond to browser history (back, forward)
+- Users can tab through the pages with a keyboard (accessibility)
+- Responsive designs for mobile, tablet, and desktop users
+- Used Sass for modular CSS
+- Added error handling if API/data errors occur
+
+## Assumptions
+
+- Due to cached data, API call revalidation occurs every 60 second. Due to API restrictions (excessive calls less than 30 seconds are unwarranted)
+
+## Screenshots
+
+Behavior:
+
+<img src="public/images/transit.gif" width="450" />
+
+Home screen:
+
+<img src="public/images/home.png" width="450" />
+
+<img src="public/images/home_mobile.png" width="350" />
+
+Alerts:
+
+<img src="public/images/error.png" width="450" />
+
+<img src="public/images/error-mobile.png" width="350" />
