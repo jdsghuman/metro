@@ -104,8 +104,10 @@ ul > li:first-child .blink {
   display: unset;
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
-  padding-top: 5px;
-  font-size: 1.2rem;
+  padding-bottom: 3px;
+  font-size: 1.1rem;
+  vertical-align: middle;
+  display: inline-block;
 }
 @keyframes blink-animation {
   to {
