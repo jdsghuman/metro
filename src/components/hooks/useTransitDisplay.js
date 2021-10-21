@@ -4,7 +4,7 @@ export default function useTransitDisplay(departures) {
   const [stopsToShow, setStopsToShow] = useState([])
   const [toggleShowAllRoutes, setToggleShowAllRoutes] = useState(false)
 
-  const getMoreStops = (departures) => {
+  const getMoreStops = () => {
     setToggleShowAllRoutes(!toggleShowAllRoutes)
   }
 

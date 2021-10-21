@@ -5,7 +5,7 @@ import { MdOutlineDoubleArrow } from 'react-icons/md'
 import classNames from 'classnames/bind'
 import Button from '../button'
 import HeaderBlock from '../headerBlock'
-import AlertDisplay from '../alertDisplay/AlertDisplay'
+import AlertDisplay from '../alertDisplay'
 import styles from './DepartureDisplay.module.scss'
 
 const cx = classNames.bind(styles)
@@ -51,12 +51,7 @@ const DepartureDisplay = ({ data }) => {
         )}
       </ul>
       {departures.length > 3 && (
-        <Button
-          type="button"
-          onClick={() => getMoreStops(departures)}
-          accent
-          className={styles.button}
-        >
+        <Button type="button" onClick={getMoreStops} accent className={styles.button}>
           {toggleShowAllRoutes ? (
             <BiMinusCircle className={styles.icon__minus} />
           ) : (
