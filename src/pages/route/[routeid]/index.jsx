@@ -4,7 +4,7 @@ import RouteDirection from '../../../components/routeDirection/RouteDirection'
 import HeaderBlock from '../../../components/headerBlock'
 import fetcher from '../../../components/util/fetcher'
 
-const index = () => {
+const Index = () => {
   const router = useRouter()
   const { routeid } = router.query
 
@@ -21,4 +21,4 @@ const index = () => {
   return <RouteDirection data={data} />
 }
 
-export default index
+export default Index

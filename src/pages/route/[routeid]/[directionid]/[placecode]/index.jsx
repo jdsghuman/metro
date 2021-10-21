@@ -4,7 +4,7 @@ import DepartureDisplay from '../../../../../components/departureDisplay/Departu
 import fetcher from '../../../../../components/util/fetcher'
 import HeaderBlock from '../../../../../components/headerBlock'
 
-const index = () => {
+const Index = () => {
   const router = useRouter()
   const { routeid, directionid, placecode } = router.query
 
@@ -24,4 +24,4 @@ const index = () => {
   return <DepartureDisplay data={data} />
 }
 
-export default index
+export default Index
