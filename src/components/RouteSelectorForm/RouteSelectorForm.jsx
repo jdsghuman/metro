@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-import HeaderBlock from '../headerBlock'
+import HeaderBlock from '../HeaderBlock'
 import Button from '../Button'
 import styles from './RouteSelectorForm.module.scss'
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import Button from '../Button'
-import HeaderBlock from '../headerBlock'
+import HeaderBlock from '../HeaderBlock'
 import styles from './StopInputSelector.module.scss'
 
 const StopInputSelector = () => {

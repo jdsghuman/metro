@@ -4,7 +4,7 @@ import { BiMinusCircle } from 'react-icons/bi'
 import { MdOutlineDoubleArrow } from 'react-icons/md'
 import classNames from 'classnames/bind'
 import Button from '../Button'
-import HeaderBlock from '../headerBlock'
+import HeaderBlock from '../HeaderBlock'
 import AlertDisplay from '../alertDisplay'
 import styles from './DepartureDisplay.module.scss'
 
