@@ -35,16 +35,16 @@ Unit tests are located in the `src` folder, inside the components folders in fil
 - Added user feedback for data fetching and a better user experience, assuming most users will be using mobile and/or data on mobile phones
 - Users can select a route or enter a stop number
 - Departure data is auto revalidated every 60 seconds, as well as on browser focus
-- Alerts for the given route/stop are displayed for users
+- Users are shown any alerts for their selected route/stop
 - Application routing allows users to respond to browser history (back, forward)
 - Users can tab through the pages with a keyboard (accessibility)
 - Responsive designs for mobile, tablet, and desktop users
 - Used Sass for modular CSS
-- Added error handling if API/data errors occur
+- Added error handling if API/data issues/slow loading occurs
 
 ## Assumptions
 
-- Due to cached data, API call revalidation occurs every 60 second. Due to API restrictions (excessive calls less than 30 seconds are unwarranted)
+- Due to the possibility that route/stop data can be cached for users, API call revalidation occurs every 60 seconds to prevent stale data. The data is also auto revalidated if the user focuses on a browser with stale data.
 
 ## Screenshots
 
