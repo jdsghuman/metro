@@ -2,7 +2,7 @@ import useSWR from 'swr'
 import { useRouter } from 'next/router'
 import React from 'react'
 import RouteStopSelectorForm from '../../../../components/RouteStopSelectorForm'
-import HeaderBlock from '../../../../components/headerBlock'
+import HeaderBlock from '../../../../components/HeaderBlock'
 import fetcher from '../../../../components/util/fetcher'
 
 const Stops = () => {
