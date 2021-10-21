@@ -24,10 +24,9 @@ Yarn is the package manager. It will install and manage the dependencies.
 
 ### Unit Tests
 
-Unit tests are located in the `src` folder inside the components folders in files named like `*.test.js`.
+Unit tests are located in the `src` folder, inside the components folders in files named: `*.test.js`.
 
-- `yarn test` : single run of the unit tests
-- `yarn test:coverage`: run test coverage
+- `yarn run test` : to run the unit tests
 
 ## Features
 
