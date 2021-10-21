@@ -1,4 +1,4 @@
-import TransitTypeSelect from '../components/TransitTypeSelect'
+import TransitTypeSelect from '../components/transitTypeSelect'
 
 const Home = () => <TransitTypeSelect />
 
