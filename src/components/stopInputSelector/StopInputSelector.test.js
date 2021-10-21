@@ -14,7 +14,7 @@ describe('StopInputSelector', () => {
 
   test('should show the submit button as enabled if a route number is entered', () => {
     render(<StopInputSelector />)
-    const inputElement = screen.getByPlaceholderText(/Enter stop number/)
+    const inputElement = screen.getByPlaceholderText(/Enter Stop #/)
     fireEvent.change(inputElement, { target: { value: 724 } })
     const button = screen.getByText('Get Stops')
     expect(button).not.toHaveClass('button--disabled')

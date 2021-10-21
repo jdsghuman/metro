@@ -10,7 +10,7 @@ const renderRouteStopSelectorForm = (props) => ({
 describe('RouteSelectorForm', () => {
   test('submit button is disabled if no route option is selected', () => {
     renderRouteStopSelectorForm({ data })
-    const button = screen.getByText(/Select a Stop/)
+    const button = screen.getByText(/Get Departure/)
     expect(button).toHaveClass('button--disabled')
   })
 
@@ -19,7 +19,7 @@ describe('RouteSelectorForm', () => {
 
     renderRouteStopSelectorForm({ data })
     userEvent.selectOptions(screen.getByRole('listbox'), routeOptionSelectedMock)
-    const button = screen.getByText(/Select a Stop/)
+    const button = screen.getByText(/Get Departure/)
     expect(button).not.toHaveClass('button--disabled')
   })
   test('should show the correct data and should NOT be selected', () => {

@@ -13,13 +13,13 @@ const TransitTypeSelect = () => {
 
   return (
     <div className={styles.container}>
-      <HeaderBlock title="Realtime Departures" subtitle="Select" />
+      <HeaderBlock title="Realtime Departures" />
       <ButtonBlock justify="center">
         <Button type="button" primary onClick={() => selectTransitType('route')}>
-          By route
+          By Route
         </Button>
         <Button type="button" accent onClick={() => selectTransitType('stop')}>
-          By stop #
+          By Stop #
         </Button>
       </ButtonBlock>
     </div>

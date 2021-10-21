@@ -36,7 +36,7 @@ const StopInputSelector = () => {
           onChange={handleChange}
           className={styles.input__field}
           name="stopNumber"
-          placeholder="Enter stop number"
+          placeholder="Enter Stop #"
           required
           ref={inputElement}
         />
