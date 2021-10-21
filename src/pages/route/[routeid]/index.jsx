@@ -1,7 +1,7 @@
 import useSWR from 'swr'
 import { useRouter } from 'next/router'
-import RouteDirection from '../../../components/RouteDirection'
-import HeaderBlock from '../../../components/HeaderBlock'
+import RouteDirection from '../../../components/routeDirection'
+import HeaderBlock from '../../../components/headerBlock'
 import fetcher from '../../../components/util/fetcher'
 
 const Index = () => {
