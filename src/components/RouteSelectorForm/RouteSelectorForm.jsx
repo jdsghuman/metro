@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import HeaderBlock from '../headerBlock'
-import Button from '../button'
+import Button from '../Button'
 import styles from './RouteSelectorForm.module.scss'
 
 const RouteSelectorForm = ({ routes }) => {

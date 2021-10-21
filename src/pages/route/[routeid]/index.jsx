@@ -1,6 +1,6 @@
 import useSWR from 'swr'
 import { useRouter } from 'next/router'
-import RouteDirection from '../../../components/routeDirection/RouteDirection'
+import RouteDirection from '../../../components/RouteDirection'
 import HeaderBlock from '../../../components/headerBlock'
 import fetcher from '../../../components/util/fetcher'
 

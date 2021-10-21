@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import Button from '../button'
-import ButtonBlock from '../buttonBlock/ButtonBlock'
+import Button from '../Button'
+import ButtonBlock from '../ButtonBlock'
 import HeaderBlock from '../headerBlock'
 import styles from './TransitTypeSelect.module.scss'
 
