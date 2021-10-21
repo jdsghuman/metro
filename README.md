@@ -4,7 +4,7 @@ The MetroTracker web application allows users to track and view departure times,
 
 View prod demo link:
 
-[TransitTracker](https://metro-5j9cv04mr-jdsghuman.vercel.app)
+[TransitTracker](https://metro-iota.vercel.app/)
 
 ## Installation
 
