@@ -5,6 +5,7 @@
 }
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 10px;
@@ -12,12 +13,22 @@
   width: 100%;
   background: $secondary;
   line-height: 1.1;
-  color: #ffffff;
-}
-
-.alert {
-  color: $secondary;
-  padding-top: 3px;
+  .alert {
+    color: #ffffff;
+    padding-top: 3px;
+    &__closed {
+      color: #555;
+      padding: 5px;
+      border-radius: 4px;
+      margin-top: 1px;
+      margin-bottom: 2px;
+      background: #ffd300;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #555;
+      font-size: 0.8rem;
+    }
+  }
 }
 
 .icon {

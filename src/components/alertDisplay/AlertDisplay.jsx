@@ -10,7 +10,10 @@ const AlertDisplay = ({ alerts }) => {
       {alerts?.map((alert, i) => {
         return (
           <div key={i} className={styles.container}>
-            <p className={styles.alert__display}>{alert.alert_text}</p>
+            <p className={styles.alert}>{alert.alert_text}</p>
+            <p data-testid="alert-closed" className={styles.alert__closed}>
+              Stop closed: {alert.stop_closed ? 'Yes' : 'No'}
+            </p>
           </div>
         )
       })}
