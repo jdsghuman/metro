@@ -27,4 +27,16 @@ describe('AlertDisplay', () => {
       expect(alert).toHaveTextContent(alertMatcher[i])
     })
   })
+
+  test('should show if transit stop is open or closed', () => {
+    const alertStopMatcher = {
+      0: 'Stop closed: No',
+      1: 'Stop closed: Yes',
+    }
+    renderAlertDisplay({ alerts })
+    const alertsDisplayed = screen.getAllByTestId('alert-closed')
+    alertsDisplayed.map((alert, i) => {
+      expect(alert).toHaveTextContent(alertStopMatcher[i])
+    })
+  })
 })

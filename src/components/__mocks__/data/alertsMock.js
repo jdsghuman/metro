@@ -4,7 +4,7 @@ export const alertsMock = [
     alert_text: 'Mock alert A',
   },
   {
-    stop_closed: false,
+    stop_closed: true,
     alert_text: 'Mock alert B',
   },
 ]
